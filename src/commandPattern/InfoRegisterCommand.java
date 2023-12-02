@@ -58,7 +58,7 @@ public class InfoRegisterCommand implements ICommand {
             System.out.println("You didn't entered 'yes' or 'no'");
         }
         if(experienceTaxiDriverB.get(experienceTaxiDriverB.size() - 1) == "1"){
-            System.out.println("Enter how long had you been a taxi driver in years");
+            System.out.println("Enter since when you have been a taxi driver | Format YYYY-MM-DD");
             experienceTaxiDriver.add(sc.nextLine());
         } else {
             experienceTaxiDriver.add("NULL");
@@ -88,8 +88,8 @@ public class InfoRegisterCommand implements ICommand {
                 city.get(city.size()-1)+"','"+
                 experienceDriving.get(experienceDriving.size()-1)+"'," +
                 categoryB.get(categoryB.size()-1)+","+
-                experienceTaxiDriverB.get(experienceTaxiDriverB.size()-1)+"," +
-                experienceTaxiDriver.get(experienceTaxiDriver.size()-1)+",'"+
+                experienceTaxiDriverB.get(experienceTaxiDriverB.size()-1)+",'" +
+                experienceTaxiDriver.get(experienceTaxiDriver.size()-1)+"','"+
                 phoneNumber.get(phoneNumber.size()-1)+"', '" +
                 selfDescription.get(selfDescription.size()-1)+"');";
         sqlCommand = sqlCommand1 + sqlCommand2;
