@@ -5,9 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-/*There can be multiple class Invokers*/
-/*For example: RemoteControlInvoker, CarKeysInvoker and etc.*/
-public class AccountManager // Invoker
+public class AccountManager
 {
     private Statement statement;
     private RegisterCommand registerCommand;
@@ -16,9 +14,6 @@ public class AccountManager // Invoker
     private ShowUserData showUserData;
     private int ID;
 
-    /*There can be multiple parameters for constructor*/
-    /*For example: (ICommand lightsOn, ICommand lightsOff, ICommand changeFloorLightColor and etc.))*/
-    /*Actual parameters: (TurnLightsCommand, TurnLightsCommand, FloorLightsCommand and etc.)*/
     public AccountManager(Statement statement){
         this.statement = statement;
         this.registerCommand = new RegisterCommand(statement);
@@ -140,7 +135,6 @@ public class AccountManager // Invoker
                 String price = resultSet.getString("Price");
                 String priceToRent = resultSet.getString("PriceToRent");
                 String transmission = resultSet.getString("Transmission");
-                String userAccountID = resultSet.getString("UserAccountID");
                 float litersPer100Km = resultSet.getFloat("LitersPer100Km");
                 float accelerationTo100KmAnHour = resultSet.getFloat("AccelerationTo100KmAnHour");
 

@@ -1,14 +1,11 @@
 package commandPattern;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/*There can be multiple class Commands*/
-/*For example: TurnLightsCommand, StartTheCarCommand and etc.*/
 public class RegisterCommand implements ICommand
 {
     private ArrayList<String> Username = new ArrayList<>();
@@ -20,7 +17,7 @@ public class RegisterCommand implements ICommand
     }
     @Override
     public void execute() {
-        Scanner sc = new Scanner(System.in); //System.in is a standard input stream
+        Scanner sc = new Scanner(System.in);
         String username = " ";
         String password = " ";
         while (true)

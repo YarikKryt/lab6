@@ -23,7 +23,6 @@ public class Main {
                 AccountManager acc = new AccountManager(statement);
                 Scanner sc = new Scanner(System.in);
 
-                // Log in or Register
                 boolean programShut = false;
                 System.out.println("If you want to log in   - press 0");
                 System.out.println("If you want to register - press 1");
@@ -44,7 +43,6 @@ public class Main {
                 if(programShut == true)
                     break;
 
-                // Menu
                 System.out.println("Your options menu:");
                 System.out.println("Show my data: press 1");
                 System.out.println("Show renting car: press 2");
